@@ -1,0 +1,64 @@
+<header>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-top fixed-navbar ">
+    <div class="container">
+      <a class="navbar-brand fs-2 fw-bold " href="#"><i class="fa fa-gem fs-2" 
+          style="color: #f54242;"></i><span class="textBlur">Diamond Cosmetics</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--Toggle  -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav Items -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0  text-center ">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link fw-semibold text-uppercase  me-1 text-danger" [routerLink]="['/products']"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> home
+            </a>
+            
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link redHover fw-semibold text-uppercase text-black  me-1" [routerLink]="['/newProduct']"
+              id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Add New Products
+            </a>
+          </li>
+     
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-uppercase text-black  me-1" [routerLink]="['/contactUs']">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-uppercase text-black  me-1" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<section id = "product">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</section>
+
+<!-- Footer -->
+<div>
+<footer class="bg-dark text-center text-white">
+  <div class="container p-2 pb-0">
+    <section class="mb-2 ">
+      <a class="btn btn-outline-light btn-floating m-1 icon" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1 icon" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1 icon" href="#!" role="button"><i class="fab fa-google"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1 icon" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1 icon" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+    </section>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="2023 Diamond Cosmetics"> Diamond Cosmetics (Pvt) Ltd</a>
+  </div>
+</footer>
+</div>

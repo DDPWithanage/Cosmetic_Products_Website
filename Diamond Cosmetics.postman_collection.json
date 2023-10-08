@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "158c2ee2-fedc-45f0-bb80-c8aed288a67d",
+		"name": "Diamond Cosmetics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13818664"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/products/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				},
+				"description": "Get ProductDetails By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Get All Products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products/delete/36",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/delete/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"delete",
+						"36"
+					]
+				},
+				"description": "Delete Products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products/edit/43",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"product_uniqueId\": 43,\r\n        \"product_id\": \"P0037\",\r\n        \"product_name\": \"Matte Lipstick\",\r\n        \"product_category\": \"Lips\",\r\n        \"product_description\": \"Load your lips with long lasting and impeccable red colour to fulfill your makeup requirements.\",\r\n        \"directions\": \"HOW TO USE:\\r\\n\\r\\nPrime and line lips with lip liner.\\r\\nFill in to wear alone, or apply lipstick to complete the look.\\r\\nFor an even bolder look, fill in and apply Colour Lipstick on top\",\r\n        \"price\": 1500,\r\n        \"in_stock\": 60,\r\n        \"image_path\": \"images/MatteLipstickL.png\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/edit/43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"edit",
+						"43"
+					]
+				},
+				"description": "Update Products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "P0039",
+							"type": "text"
+						},
+						{
+							"key": "product_name",
+							"value": "Viana Day Cream",
+							"type": "text"
+						},
+						{
+							"key": "product_category",
+							"value": "Skin",
+							"type": "text"
+						},
+						{
+							"key": "product_description",
+							"value": "Keeps your skin from being damaged while you go through your everyday tasks",
+							"type": "text"
+						},
+						{
+							"key": "directions",
+							"value": "HOW TO USE:\n\nCleanse area to apply and apply cream",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "2,000 LKR",
+							"type": "text"
+						},
+						{
+							"key": "in_stock",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Dell/Documents/ASE/Azbow/Images/Matte Lipstick/MatteLipstickLL.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Create a New Product"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<section id="product">
+    <div class="container">
+        <div class="row mt-5 mb-3">
+            <div class="col-12">
+                <div class="productHeading d-flex justify-content-between align-items-center text-center">
+                    <h1 class="mb-1 mx-auto"><b>Exclusive Products</b></h1>
+                    <a href="/newProduct" class="m-4 text-decoration-none text-danger fw-semibold">
+                        <i class="fa-solid fa-circle-plus fa-4x"></i>
+                    </a>
+                </div>   
+            </div>
+
+            <div class="col-12">
+                <div class="row mt-3">
+                    <div class="col-lg-3 pt-3" *ngFor="let product of productList">
+                        <div class="box-shadow" style="width: 280px;">
+                            <div class="card">  
+                                <div class="navigate" (click)="navigateToProductDetails(product.product_uniqueId)">
+
+                                    <img class="img-fluid" style="height: 200px;" [src]="'http://localhost:8080/' + product.image_path" class="card-img-top"
+                                    alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{product.product_name}}</h5>
+                                    <p class="card-text">
+                                        <span class="text-danger fw-semibold me-2">{{product.price}} LKR</span>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span class="text-muted">{{product.product_category}}</span>
+                                        </div>
+                                       
+                                    </div>
+                                   
+                                </div>
+                                </div>
+                                
+                                <div class="clickable-icon p-1" (click)="deleteProduct(product.product_uniqueId)">
+                                    <i class="far fa-light fa-trash-alt"></i>
+                                </div>    
+                            
+                        </div>
+                       
+                        </div>
+                    </div> 
+
+                    
+                </div>
+              
+
+            </div>
+
+           
+        </div>
+
+        <mat-paginator
+            [length]="60"
+            [pageSize]="10"
+            [showFirstLastButtons]="true"
+            [pageSizeOptions]="[5,10,20]"
+            [pageIndex]="currentPage"
+            (page)="handlePageEvent($event)">
+        </mat-paginator>
+    </div>
+    
+</section>

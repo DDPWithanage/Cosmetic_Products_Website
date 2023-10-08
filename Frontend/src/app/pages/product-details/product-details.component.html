@@ -1,0 +1,56 @@
+<div *ngIf="product">
+    <section id="product">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    
+                </div>
+            </div>
+
+            <div class="box-shadow mt-5 p-5">
+                <div class="card d-flex align-items-center" style="border: none;">
+                    <div class="row mb-5">
+                        <div class="col-4 mx-auto">
+                            <img class="img-fluid" style="max-height: 500px; max-width: 450px;" [src]="'http://localhost:8080/' + product.image_path" class="card-img-left" alt="...">
+                        </div>
+                        
+                        <div class="col-8 p-5 pt-0">
+                            <div class="card-body">
+                                <div class="productHeading text-center">
+                                    <h1>{{ product.product_name }}</h1> 
+                                </div>
+                                <div class="card-text p-5">
+                                    <p class="card-text">
+                                        <span class="text-dark fw-semibold me-2">Prosuct Price</span>
+                                        <span class="text-muted me-2">{{ product.price }} LKR</span>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="text-dark fw-semibold me-2">Product Description</span>
+                                        <span class="text-muted me-2">{{ product.product_description }}</span>
+                                    </p>
+                                    <p class="card-text">
+                                        <span class="text-dark fw-semibold me-2">Instructions to Use</span>
+                                        <span class="text-muted me-2">{{ product.directions }}</span>
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="col-2 d-flex align-items-center ms-auto p-0">
+                            <button (click)="navigateToEditProduct(product.product_uniqueId)" class="btn btn-dark btn-lg mt-3">Edit</button>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+
+            
+
+        </div>
+    </section>
+</div>
